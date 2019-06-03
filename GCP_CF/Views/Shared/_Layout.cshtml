@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Mi aplicación ASP.NET</title>
     @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+    @*@Scripts.Render("~/bundles/modernizr")*@
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -17,13 +17,47 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Nombre de aplicación", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("GCP", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
                     <li>@Html.ActionLink("Acerca de", "About", "Home")</li>
                     <li>@Html.ActionLink("Contacto", "Contact", "Home")</li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Contratos
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Creacion de Contratos", "Index", "Contratos")</li>
+                            <li>@Html.ActionLink("Contratos Marco", "Index", "ContratosMarcoes")</li>
+                            <li>@Html.ActionLink("Tipos de Contratos", "Index", "TiposContratos")</li>
+                            <li>@Html.ActionLink("Tipos de Estado Contratos", "Index", "TiposEstadoContratoes")</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Fases de Contrato
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Creación de Fases", "Index", "")</li>
+                            <li>@Html.ActionLink("Actividades", "Index", "Actividades")</li>
+                            <li>@Html.ActionLink("Estado Fases", "Index", "EstadosFases")</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Personas
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Creación de Pesona", "Index", "Personas")</li>
+                            <li>@Html.ActionLink("Tipos de Persona", "Index", "TiposPersonas")</li>
+                            <li>@Html.ActionLink("Naturaleza", "Index", "TiposNaturalezas")</li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -32,7 +66,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - Mi aplicación ASP.NET</p>
+            <p>Tisa &copy; @DateTime.Now.Year - GCP</p>
         </footer>
     </div>
 
