@@ -1,0 +1,64 @@
+﻿@model IEnumerable<GCP_CF.Models.Personas>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Personas</h2>
+
+<p>
+    @Html.ActionLink("Crear Nuevo", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Tipo Persona
+            @*@Html.DisplayNameFor(model => model.TiposPersona.Descripcion)*@
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombres)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Apellidos)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Direccion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Telefono)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Correo)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TiposPersona.Descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nombres)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Apellidos)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Direccion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Telefono)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Correo)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.Persona_Id }) |
+            @Html.ActionLink("Detalles", "Details", new { id=item.Persona_Id }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id=item.Persona_Id })
+        </td>
+    </tr>
+}
+
+</table>
