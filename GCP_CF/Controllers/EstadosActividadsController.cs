@@ -10,107 +10,107 @@ using GCP_CF.Models;
 
 namespace GCP_CF.Controllers
 {
-    public class EstadosFasesController : Controller
+    public class EstadosActividadsController : Controller
     {
         private GCPContext db = new GCPContext();
 
-        // GET: EstadosFases
+        // GET: EstadosActividads
         public ActionResult Index()
         {
-            return View(db.EstadosFases.ToList());
+            return View(db.EstadosActividads.ToList());
         }
 
-        // GET: EstadosFases/Details/5
+        // GET: EstadosActividads/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            EstadosFases estadosFases = db.EstadosFases.Find(id);
-            if (estadosFases == null)
+            EstadosActividad estadosActividad = db.EstadosActividads.Find(id);
+            if (estadosActividad == null)
             {
                 return HttpNotFound();
             }
-            return View(estadosFases);
+            return View(estadosActividad);
         }
 
-        // GET: EstadosFases/Create
+        // GET: EstadosActividads/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: EstadosFases/Create
+        // POST: EstadosActividads/Create
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Estado_Id,Descripcion")] EstadosFases estadosFases)
+        public ActionResult Create([Bind(Include = "EstadoActividad_Id,Descripcion")] EstadosActividad estadosActividad)
         {
             if (ModelState.IsValid)
             {
-                db.EstadosFases.Add(estadosFases);
+                db.EstadosActividads.Add(estadosActividad);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(estadosFases);
+            return View(estadosActividad);
         }
 
-        // GET: EstadosFases/Edit/5
+        // GET: EstadosActividads/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            EstadosFases estadosFases = db.EstadosFases.Find(id);
-            if (estadosFases == null)
+            EstadosActividad estadosActividad = db.EstadosActividads.Find(id);
+            if (estadosActividad == null)
             {
                 return HttpNotFound();
             }
-            return View(estadosFases);
+            return View(estadosActividad);
         }
 
-        // POST: EstadosFases/Edit/5
+        // POST: EstadosActividads/Edit/5
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Estado_Id,Descripcion")] EstadosFases estadosFases)
+        public ActionResult Edit([Bind(Include = "EstadoActividad_Id,Descripcion")] EstadosActividad estadosActividad)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(estadosFases).State = EntityState.Modified;
+                db.Entry(estadosActividad).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(estadosFases);
+            return View(estadosActividad);
         }
 
-        // GET: EstadosFases/Delete/5
+        // GET: EstadosActividads/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            EstadosFases estadosFases = db.EstadosFases.Find(id);
-            if (estadosFases == null)
+            EstadosActividad estadosActividad = db.EstadosActividads.Find(id);
+            if (estadosActividad == null)
             {
                 return HttpNotFound();
             }
-            return View(estadosFases);
+            return View(estadosActividad);
         }
 
-        // POST: EstadosFases/Delete/5
+        // POST: EstadosActividads/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            EstadosFases estadosFases = db.EstadosFases.Find(id);
-            db.EstadosFases.Remove(estadosFases);
+            EstadosActividad estadosActividad = db.EstadosActividads.Find(id);
+            db.EstadosActividads.Remove(estadosActividad);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

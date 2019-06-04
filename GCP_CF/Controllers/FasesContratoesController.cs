@@ -10,107 +10,107 @@ using GCP_CF.Models;
 
 namespace GCP_CF.Controllers
 {
-    public class ActividadesController : Controller
+    public class FasesContratoesController : Controller
     {
         private GCPContext db = new GCPContext();
 
-        // GET: Actividades
+        // GET: FasesContratoes
         public ActionResult Index()
         {
-            return View(db.Actividades.ToList());
+            return View(db.FasesContratoes.ToList());
         }
 
-        // GET: Actividades/Details/5
+        // GET: FasesContratoes/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Actividades actividades = db.Actividades.Find(id);
-            if (actividades == null)
+            FasesContrato fasesContrato = db.FasesContratoes.Find(id);
+            if (fasesContrato == null)
             {
                 return HttpNotFound();
             }
-            return View(actividades);
+            return View(fasesContrato);
         }
 
-        // GET: Actividades/Create
+        // GET: FasesContratoes/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Actividades/Create
+        // POST: FasesContratoes/Create
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Actividad_Id,Descripción")] Actividades actividades)
+        public ActionResult Create([Bind(Include = "FaseContrato_Id,Descripcion")] FasesContrato fasesContrato)
         {
             if (ModelState.IsValid)
             {
-                db.Actividades.Add(actividades);
+                db.FasesContratoes.Add(fasesContrato);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(actividades);
+            return View(fasesContrato);
         }
 
-        // GET: Actividades/Edit/5
+        // GET: FasesContratoes/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Actividades actividades = db.Actividades.Find(id);
-            if (actividades == null)
+            FasesContrato fasesContrato = db.FasesContratoes.Find(id);
+            if (fasesContrato == null)
             {
                 return HttpNotFound();
             }
-            return View(actividades);
+            return View(fasesContrato);
         }
 
-        // POST: Actividades/Edit/5
+        // POST: FasesContratoes/Edit/5
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Actividad_Id,Descripción")] Actividades actividades)
+        public ActionResult Edit([Bind(Include = "FaseContrato_Id,Descripcion")] FasesContrato fasesContrato)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(actividades).State = EntityState.Modified;
+                db.Entry(fasesContrato).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(actividades);
+            return View(fasesContrato);
         }
 
-        // GET: Actividades/Delete/5
+        // GET: FasesContratoes/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Actividades actividades = db.Actividades.Find(id);
-            if (actividades == null)
+            FasesContrato fasesContrato = db.FasesContratoes.Find(id);
+            if (fasesContrato == null)
             {
                 return HttpNotFound();
             }
-            return View(actividades);
+            return View(fasesContrato);
         }
 
-        // POST: Actividades/Delete/5
+        // POST: FasesContratoes/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Actividades actividades = db.Actividades.Find(id);
-            db.Actividades.Remove(actividades);
+            FasesContrato fasesContrato = db.FasesContratoes.Find(id);
+            db.FasesContratoes.Remove(fasesContrato);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

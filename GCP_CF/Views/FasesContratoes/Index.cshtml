@@ -1,13 +1,13 @@
-﻿@model IEnumerable<GCP_CF.Models.EstadosFases>
+﻿@model IEnumerable<GCP_CF.Models.FasesContrato>
 
 @{
     ViewBag.Title = "Index";
 }
 
-<h2>Estados Fases</h2>
+<h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Crear Nuevo", "Create")
+    @Html.ActionLink("Create New", "Create")
 </p>
 <table class="table">
     <tr>
@@ -23,9 +23,9 @@
             @Html.DisplayFor(modelItem => item.Descripcion)
         </td>
         <td>
-            @Html.ActionLink("Editar", "Edit", new { id=item.Estado_Id }) |
-            @Html.ActionLink("Detalles", "Details", new { id=item.Estado_Id }) |
-            @Html.ActionLink("Eliminar", "Delete", new { id=item.Estado_Id })
+            @Html.ActionLink("Edit", "Edit", new { id=item.FaseContrato_Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.FaseContrato_Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.FaseContrato_Id })
         </td>
     </tr>
 }

@@ -132,9 +132,11 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\ActividadesController.cs" />
+    <Compile Include="Controllers\ActividadesFasesController.cs" />
+    <Compile Include="Controllers\ContratosController.cs" />
     <Compile Include="Controllers\ContratosMarcoesController.cs" />
-    <Compile Include="Controllers\EstadosFasesController.cs" />
+    <Compile Include="Controllers\EstadosActividadsController.cs" />
+    <Compile Include="Controllers\FasesContratoesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PersonasController.cs" />
     <Compile Include="Controllers\TiposContratosController.cs" />
@@ -145,10 +147,11 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\Actividades.cs" />
+    <Compile Include="Models\ActividadesFases.cs" />
     <Compile Include="Models\Contratos.cs" />
     <Compile Include="Models\ContratosMarco.cs" />
-    <Compile Include="Models\EstadosFases.cs" />
+    <Compile Include="Models\EstadosActividad.cs" />
+    <Compile Include="Models\FasesContrato.cs" />
     <Compile Include="Models\GCPContext.cs" />
     <Compile Include="Models\Personas.cs" />
     <Compile Include="Models\TiposContratos.cs" />
@@ -221,21 +224,11 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Actividades\Create.cshtml" />
-    <Content Include="Views\Actividades\Delete.cshtml" />
-    <Content Include="Views\Actividades\Details.cshtml" />
-    <Content Include="Views\Actividades\Edit.cshtml" />
-    <Content Include="Views\Actividades\Index.cshtml" />
     <Content Include="Views\ContratosMarcoes\Create.cshtml" />
     <Content Include="Views\ContratosMarcoes\Delete.cshtml" />
     <Content Include="Views\ContratosMarcoes\Details.cshtml" />
     <Content Include="Views\ContratosMarcoes\Edit.cshtml" />
     <Content Include="Views\ContratosMarcoes\Index.cshtml" />
-    <Content Include="Views\EstadosFases\Create.cshtml" />
-    <Content Include="Views\EstadosFases\Delete.cshtml" />
-    <Content Include="Views\EstadosFases\Details.cshtml" />
-    <Content Include="Views\EstadosFases\Edit.cshtml" />
-    <Content Include="Views\EstadosFases\Index.cshtml" />
     <Content Include="Views\TiposNaturalezas\Create.cshtml" />
     <Content Include="Views\TiposNaturalezas\Delete.cshtml" />
     <Content Include="Views\TiposNaturalezas\Details.cshtml" />
@@ -261,6 +254,26 @@
     <Content Include="Views\TiposEstadoContratoes\Details.cshtml" />
     <Content Include="Views\TiposEstadoContratoes\Edit.cshtml" />
     <Content Include="Views\TiposEstadoContratoes\Index.cshtml" />
+    <Content Include="Views\Contratos\Create.cshtml" />
+    <Content Include="Views\Contratos\Delete.cshtml" />
+    <Content Include="Views\Contratos\Details.cshtml" />
+    <Content Include="Views\Contratos\Edit.cshtml" />
+    <Content Include="Views\Contratos\Index.cshtml" />
+    <Content Include="Views\EstadosActividads\Create.cshtml" />
+    <Content Include="Views\EstadosActividads\Delete.cshtml" />
+    <Content Include="Views\EstadosActividads\Details.cshtml" />
+    <Content Include="Views\EstadosActividads\Edit.cshtml" />
+    <Content Include="Views\EstadosActividads\Index.cshtml" />
+    <Content Include="Views\FasesContratoes\Create.cshtml" />
+    <Content Include="Views\FasesContratoes\Delete.cshtml" />
+    <Content Include="Views\FasesContratoes\Details.cshtml" />
+    <Content Include="Views\FasesContratoes\Edit.cshtml" />
+    <Content Include="Views\FasesContratoes\Index.cshtml" />
+    <Content Include="Views\ActividadesFases\Create.cshtml" />
+    <Content Include="Views\ActividadesFases\Delete.cshtml" />
+    <Content Include="Views\ActividadesFases\Details.cshtml" />
+    <Content Include="Views\ActividadesFases\Edit.cshtml" />
+    <Content Include="Views\ActividadesFases\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

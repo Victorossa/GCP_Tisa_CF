@@ -33,8 +33,8 @@
                         Contratos
                     </a>
                     <ul class="collapse list-unstyled" id="contratosSubmenu">
-                        <li>@Html.ActionLink("Crear Contratos", "Index", "Contratos")</li>
-                        <li>@Html.ActionLink("Ver Contratos", "Index", "")</li>
+                        <li>@Html.ActionLink("Ver Contratos", "Index", "Contratos")</li>
+                        <li>@Html.ActionLink("Crear Contratos", "Create")</li>
                         <li>@Html.ActionLink("Ver Contratos Marco", "Index", "ContratosMarcoes")</li>
                         <li>@Html.ActionLink("Ver Tipos de Contratos", "Index", "TiposContratos")</li>
                         <li>@Html.ActionLink("Ver Estados Contratos", "Index", "TiposEstadoContratoes")</li>
@@ -46,8 +46,9 @@
                         Fases Contrato
                     </a>
                     <ul class="collapse list-unstyled" id="fasesSubmenu">
-                        <li>@Html.ActionLink("Crear Fase", "Index", "")</li>
-                        <li>@Html.ActionLink("Actividades", "Index", "Actividades")</li>
+                        <li>@Html.ActionLink("Fases", "Index", "FasesContratoes")</li>
+                        <li>@Html.ActionLink("Actividades", "Index","ActividadesFases")</li>
+                        <li>@Html.ActionLink("Crear Actividades", "Index", "Actividades")</li>
                         <li>@Html.ActionLink("Estado Fases", "Index", "EstadosFases")</li>
                     </ul>
                 </li>
